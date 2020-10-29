@@ -33,6 +33,6 @@ nieuwe_afmeting = (helft_breedte, helft_hoogte)
 kleinere_afbeelding = afbeelding.resize(nieuwe_afmeting)
 
 # Nu de kleinere afbeelding opslaan me save(). Gebruik de originele bestandsnaam met ergens "klein" er in.
-kleinere_afbeelding.save("anime.jpg")
+kleinere_afbeelding.save("anime_groot.jpg")
 
 # zet hier nu zelf de python code onder de kleinere afbeelding op het scherm te tonen
