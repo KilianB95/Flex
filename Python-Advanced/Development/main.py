@@ -20,6 +20,21 @@ FPS     = 30
 BG_COLOUR = [0, 0, 0]
 IS_RUNNING = True
 
+class Mario:
+
+    _coins = 1
+    lives = 3
+
+    def _init_(self, lives):
+        self.lives = levens
+
+print("Mario.lives: ", Mario.lives)
+
+Mario5 = Mario
+Mario5.lives = 500
+
+print("Mario5.lives", Mario5.lives)
+
 
 playerSprite = pygame.image.load("../Art/spr_Player.png")
 playerRect = playerSprite.get_rect()
