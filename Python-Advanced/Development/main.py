@@ -20,13 +20,47 @@ FPS     = 30
 BG_COLOUR = [0, 0, 0]
 IS_RUNNING = True
 
-class Mario:
+class character :
+    speed = 15
+    points = 0
+    strenght = 20
+    stamina = 15
+
+
+    def __init__(self) :
+        print("De Character zijn constructor")
+
+    def walk(self) :
+        print("Character loopt met een snelheid", self.speed)
+
+class Mario1 (character) :
+
+    lives = 2
+    item = None
+
+    def __init__(self) :
+        # We cullen aan op de constructor van de character:
+        super().__init__()
+
+        # Snelheid van Mario1 is hoger dan Standaar:
+        self.speed = 35
+
+
+        # De "Walk" funciotnaliteit van de Character ga ik OVERSCHRIJVEN
+        def walk(self) :
+            print("Mario1 loopt sneller dan normaal waardoor hij apart loopt", self.speed)
+        
+    def jump(self) :
+        print("Mario1 kan springen")
+
+class Mario :
 
     _coins = 1
     lives = 3
 
-    def _init_(self, lives):
+    def __init__(self, lives):
         self.lives = levens
+
 
 print("Mario.lives: ", Mario.lives)
 
@@ -35,6 +69,20 @@ Mario5.lives = 500
 
 print("Mario5.lives", Mario5.lives)
 
+# Instanties maken:
+CharacterA = character
+MarioX = Mario1
+
+CharacterA.walk
+MarioX.walk
+MarioX.jump
+
+print(CharacterA.speed)
+print(MarioX.speed)
+print(MarioX.lives)
+
+# Het resultaat wordt hier weergeven:
+print(MarioX)
 
 playerSprite = pygame.image.load("../Art/spr_Player.png")
 playerRect = playerSprite.get_rect()
